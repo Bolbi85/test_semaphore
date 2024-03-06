@@ -25,10 +25,10 @@
         image: mysql:latest
         restart_policy: always
         env:
-          MYSQL_ROOT_PASSWORD: your_password_here
-          MYSQL_DATABASE: your_database_name_here
-          MYSQL_USER: your_mysql_user_here
-          MYSQL_PASSWORD: your_mysql_password_here
+          MYSQL_ROOT_PASSWORD: Welkom01!
+          MYSQL_DATABASE: Test
+          MYSQL_USER: Dogukan
+          MYSQL_PASSWORD: Welkom01!
         ports:
           - "3306:3306"
       tags:
