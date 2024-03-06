@@ -1,5 +1,4 @@
 - name: Voorbeeld playbook
   hosts: all
   tasks:
-    - name: Controleer of hosts reageren op ping
       ping: 1.1.1.1
