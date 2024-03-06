@@ -1,6 +1,5 @@
----
-
-- hosts: all
-  gather_facts: false
+- name: Voorbeeld playbook
+  hosts: all
   tasks:
-    - ping: 1.1.1.1
+    - name: Controleer of hosts reageren op ping
+      ping: 1.1.1.1
