@@ -1,6 +1,6 @@
 ---
 - name: Open SSH-server op Ubuntu
-  hosts: your_ubuntu_host  # Vervang 'your_ubuntu_host' door de naam of het IP-adres van je Ubuntu-machine
+  hosts: all  # Vervang 'your_ubuntu_host' door de naam of het IP-adres van je Ubuntu-machine
   become: yes  # Dit zorgt ervoor dat we root-rechten hebben om de SSH-configuratie te wijzigen
 
   tasks:
