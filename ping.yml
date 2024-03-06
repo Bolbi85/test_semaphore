@@ -1,6 +1,6 @@
 ---
-
-- hosts: all
-  gather_facts: false
+- name: ping module demo
+  hosts: all
   tasks:
-    - ping: 1.1.1.1
+    - name: testing ping
+      ansible.builtin.ping: 1.1.1.1
