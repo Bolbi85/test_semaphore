@@ -1,0 +1,35 @@
+---
+- name: Docker en MySQL installeren
+  hosts: all
+  become: yes  # Dit zorgt ervoor dat we root-rechten hebben om Docker te installeren
+
+  tasks:
+    - name: Docker installeren
+      apt:
+        name: docker.io
+        state: present  # Zorg ervoor dat Docker is geïnstalleerd
+      tags:
+        - docker
+
+    - name: Docker service starten en inschakelen
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+      tags:
+        - docker
+
+    - name: MySQL Docker container opstarten
+      docker_container:
+        name: mysql_container
+        image: mysql:latest
+        restart_policy: always
+        env:
+          MYSQL_ROOT_PASSWORD: your_password_here
+          MYSQL_DATABASE: your_database_name_here
+          MYSQL_USER: your_mysql_user_here
+          MYSQL_PASSWORD: your_mysql_password_here
+        ports:
+          - "3306:3306"
+      tags:
+        - mysql
