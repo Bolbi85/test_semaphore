@@ -1,4 +1,6 @@
-- name: Voorbeeld playbook
-  hosts: all
+---
+
+- hosts: all
+  gather_facts: false
   tasks:
     - ping: 1.1.1.1
