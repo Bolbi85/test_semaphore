@@ -14,7 +14,7 @@
     - name: Docker service starten en inschakelen
       systemd:
         name: docker
-        state: starte
+        state: started
         enabled: yes
       tags:
         - docker
