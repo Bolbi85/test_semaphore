@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: testing ping
-      ansible.builtin.ping: 1.1.1.1
+      ansible.builtin.ping:
