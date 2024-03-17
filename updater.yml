@@ -2,8 +2,7 @@
 - hosts: all
   
   become: yes
-  become_user: root
-  become_method: su
+  become_user: student
 
   tasks:
     - name: APT Package Updater
