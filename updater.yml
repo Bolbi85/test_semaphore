@@ -1,8 +1,8 @@
 ---
 - hosts: all
   
-  sudo: true
-  sudo_user: student
+  become: true
+  become_user: student
 
   tasks:
     - name: APT Package Updater
