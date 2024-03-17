@@ -7,4 +7,3 @@
     - name: APT Package Updater
       apt: 
         upgrade: yes
-        upgrade_cache: yes
