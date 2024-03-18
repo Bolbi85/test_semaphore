@@ -5,4 +5,5 @@
     - name: Upgrade all packages to the latest version
       become: yes
       apt:
-        update: yes
+        upgrade: yes
+        update_cache: yes
