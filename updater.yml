@@ -1,13 +1,15 @@
 ---
 - hosts: all
   
-  become: yes
-  
   tasks:
     - name: Update APT Cache
+      become: yes
       apt:
         update_cache: yes
+      
 
     - name: Upgrade all packages to the latest version
+      become: yes
       apt:
         update: yes
+      
